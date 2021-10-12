@@ -60,7 +60,8 @@ def append_week_info(curr_date, save_temp_list, template=templates.TEMPLATE_DEFA
     :return:
     """
     week = DateUtil.get_week_day_by_str(curr_date) if settings.NEED_WEEK else ''
-    save_temp_list.append(template.format(DATE=curr_date, WEEK=f'【{week}】'))
+    week_info = f'【{week}】' if settings.NEED_WEEK else ''
+    save_temp_list.append(template.format(DATE=curr_date, WEEK=week_info))
     if settings.SPLIT_LINE_FOR_WEEK and week == DateUtil.Week.Sun.value:
         save_temp_list.append(templates.TEMPLATE_SPLIT_LINE)
 
