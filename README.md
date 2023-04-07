@@ -12,3 +12,7 @@
     ```
     python3 main.py
     ```
+
+### 技术交流
+- [Join Discord >>](https://discord.com/invite/eRuSqve8CE)
+- WeChat：`SamgeApp`
